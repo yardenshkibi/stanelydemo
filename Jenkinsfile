@@ -3,6 +3,7 @@ pipeline {
 stages {
    stage('Build maven project with testss') {
       steps {
+       withMaven(maven: 'maven') {
       script {
-       sh """ mvnw clean install """
+       sh """ mvn clean install """
 }}}}}
