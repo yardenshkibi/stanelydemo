@@ -9,8 +9,7 @@ stages {
       }}}}
    stage('Build docker image') {
       steps {
-       withMaven(maven: 'maven') {
       script {
        sh """  docker build -t demo ."""
-      }}}}
+      }}}
 }}
