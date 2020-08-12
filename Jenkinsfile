@@ -10,6 +10,6 @@ stages {
    stage('Build docker image') {
       steps {
       script {
-       sh """  echo 'docker build -t demo .'"""
+       sh """ docker build -t demo ."""
       }}}
 }}
