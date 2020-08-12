@@ -1,10 +1,10 @@
 FROM java:8-jdk-alpine
-COPY ["./target/demo-*.jar", "/usr/app/demo.jar"]
+COPY ["./target/demo-*.jar", "/usr/app/demo-0.0.1-SNAPSHOT.jar"]
 
 WORKDIR /usr/app
 
-RUN sh -c 'demo.jar'
+RUN sh -c 'touch demo-0.0.1-SNAPSHOT.jar'
 
 EXPOSE 8181
 
-ENTRYPOINT ["java","-jar","demo.jar"]
+ENTRYPOINT ["java","-jar","demo-0.0.1-SNAPSHOT.jar"]
