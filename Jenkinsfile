@@ -6,8 +6,6 @@ stages {
        withMaven(maven: 'maven') {
       script {
        sh """ mvn clean install """
-       sh """  docker build -t demo ."""
-       sh """  docker run -it demo ."""
       }}}}
    stage('Build docker image') {
       steps {
