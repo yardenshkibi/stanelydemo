@@ -9,3 +9,5 @@ RUN sh -c 'chmod 775 demo-0.0.1-SNAPSHOT.jar'
 EXPOSE 8181
 
 ENTRYPOINT ["java","-jar","demo-0.0.1-SNAPSHOT.jar"]
+
+CMD ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
